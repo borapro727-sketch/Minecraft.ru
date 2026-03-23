@@ -2,20 +2,154 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Мой хостинг с текстовым редактором</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир Minecraft</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Minecraft', Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(to right, #3c8c3f, #2a6a2d);
+            border-bottom: 5px solid #a86332;
+        }
+        h1 {
+            font-size: 3rem;
+            text-shadow: 3px 3px 0 #a86332;
+            color: #fff;
+        }
+        nav {
+            background-color: #2d2d2d;
+            padding: 15px 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: #b0e0e6;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffeb3b;
+        }
+        section {
+            padding: 40px 0;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .feature-card {
+            background-color: #2d2d2d;
+            padding: 20px;
+            border: 3px solid #555;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #0d0d0d;
+            border-top: 3px solid #3c8c3f;
+        }
+    </style>
+    <!-- Подключаем шрифт в стиле Minecraft -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body, h1, h2, h3, p, a {
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Текстовый редактор с сохранением данных</h1>
-        <textarea id="editor" placeholder="Введите текст здесь..."></textarea>
-        <div class="buttons">
-            <button onclick="saveData()">Сохранить</button>
-            <button onclick="loadData()">Загрузить</button>
-            <button onclick="clearData()">Очистить</button>
+    <header>
+        <div class="container">
+            <h1>Мир Minecraft</h1>
+            <p>Добро пожаловать в безграничный мир кубов и приключений!</p>
         </div>
-        <p id="status"></p>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">О игре</a></li>
+                <li><a href="#features">Особенности</a></li>
+                <li><a href="#download">Скачать</a></li>
+                <li><a href="#community">Сообщество</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>О Minecraft</h2>
+            <p>Minecraft — это песочница с элементами выживания и безграничными возможностями для творчества. Стройте, исследуйте, сражайтесь и выживайте в процедурно генерируемом мире, состоящем из кубов.</p>
+        </section>
+
+        <section id="features">
+            <h2>Особенности игры</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Творчество</h3>
+                    <p>Стройте всё, что угодно — от простых домов до огромных городов и фантастических сооружений.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Выживание</h3>
+                    <p>Добывайте ресурсы, создавайте инструменты, защищайтесь от мобов и следите за уровнем здоровья.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Исследование</h3>
+                    <p>Открывайте новые биомы, находите сокровища и отправляйтесь в Нижний мир и Край.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="download">
+            <h2>Скачать игру</h2>
+            <p>Получите официальную версию Minecraft на сайте разработчика:</p>
+            <a href="https://www.minecraft.net" target="_blank" style="color: #4CAF50; font-weight: bold;">Перейти на minecraft.net</a>
+        </section>
+
+        <section id="community">
+            <h2>Присоединяйтесь к сообществу!</h2>
+            <p>Общайтесь с другими игроками, делитесь постройками и участвуйте в совместных проектах.</p>
+            <ul>
+                <li>Форум: <a href="#">minecraft-forum.ru</a></li>
+                <li>Discord: <a href="#">discord.gg/minecraft-ru</a></li>
+                <li>VK: <a href="#">vk.com/minecraft_russia</a></li>
+            </ul>
+        </section>
     </div>
-    <script src="script.js"></script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Мир Minecraft. Все права защищены. Minecraft является товарным знаком Mojang Studios.</p>
+        </div>
+    </footer>
 </body>
 </html>
